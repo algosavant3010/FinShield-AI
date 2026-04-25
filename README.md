@@ -1,6 +1,6 @@
 # FinShield AI — DeepFake Detection System
 ### Part of the Multimodal KYC Fraud Detection Platform
-**Group C66 | K. J. Somaiya School of Engineering | Department of Computer Engineering**
+
 
 ---
 
@@ -318,18 +318,3 @@ The system provides three levels of explanation:
 **3. Modality weights α** (fusion): Shows whether the decision was primarily spatial (texture), temporal (motion), or frequency (spectral) — logged in every API response.
 
 ---
-
-## References
-
-1. Dosovitskiy et al. (2021). *An Image is Worth 16×16 Words: Transformers for Image Recognition at Scale*. ICLR.
-2. Liu et al. (2022). *Swin Transformer V2*. CVPR.
-3. Bertasius et al. (2021). *Is Space-Time Attention All You Need for Video Understanding? TimeSformer*. ICML.
-4. Madry et al. (2018). *Towards Deep Learning Models Resistant to Adversarial Attacks*. ICLR.
-5. Lin et al. (2017). *Focal Loss for Dense Object Detection*. ICCV.
-6. Rossler et al. (2019). *FaceForensics++: Learning to Detect Manipulated Facial Images*. ICCV.
-7. Selvaraju et al. (2017). *Grad-CAM: Visual Explanations from Deep Networks*. ICCV.
-8. Qian et al. (2020). *Thinking in Frequency: Face Forgery Detection by Mining Frequency-aware Clues*. ECCV.
-
----
-
-*FinShield AI | KYC Fraud Detection Platform | Computer Engineering Dept., KJ Somaiya School of Engineering*
