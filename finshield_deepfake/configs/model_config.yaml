@@ -1,0 +1,38 @@
+# FinShield AI — Model Configuration
+# Edit this file to change architecture / training settings
+# Then pass to train.py: python train.py --config configs/model_config.yaml
+
+model:
+  embed_dim: 512          # Shared embedding dimension across all branches
+  num_classes: 2          # 2 = binary (real / fake)
+  num_frames: 16          # Frames sampled per video clip
+  spatial_depths: [2, 2, 6, 2]   # Swin stages depth
+  fusion_heads: 8         # Cross-attention heads in TriModalFusion
+  dropout: 0.1
+  fusion_mode: "full"     # Options: full | no_freq | no_temporal | concat
+
+training:
+  epochs: 50
+  batch_size: 4           # Reduce to 2 if GPU OOM
+  lr: 0.0001
+  weight_decay: 0.0001
+  warmup_epochs: 2
+  patience: 10            # Early stopping patience
+  focal_gamma: 2.0        # Focal loss gamma
+  fp16: true              # Mixed precision training
+  sampling: "motion"      # Options: motion | uniform
+  num_workers: 4
+
+adversarial:
+  enabled: true
+  attack: "pgd"           # Options: pgd | fgsm
+  epsilon: 0.03
+  alpha: 0.007
+  pgd_steps: 7
+  adv_every: 4            # Apply attack every N batches
+  lambda: 0.5             # Weight of adversarial loss
+
+paths:
+  manifest: "data/manifest.json"
+  output_dir: "outputs/run_001"
+  resume_checkpoint: null  # Set to checkpoint path to resume
